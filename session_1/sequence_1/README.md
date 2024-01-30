@@ -168,3 +168,12 @@ regnault_b = ['Regnault et Vve Poupinel' 'fab. d''ouates, depet' 'Charonne 47']
 > [!NOTE] 
 > **📝 À retenir.**
 Le couplage est un processus composé de multiples étapes et de nombreuses approches existent. Elles reposent toutefois toutes sur les mêmes grandes étapes. Lorsqu'on utilise du couplage approximatif, fixer les paramètres du calcul n'est pas évident et demande une connaissance approfondie des données. Aujourd'hui, il existe des méthodes tentant de déterminer ce type de paramètre de manière automatique, par apprentissage. Cela dépasse toutefois le cadre de cet atelier !
+
+
+
+🏁 C'est tout pour cette fois !
+
+J'espère que cette activité a été enrichissante.
+
+N'hésitez pas à donner rapidement votre avis anonyme 📢 via [ce formulaire 📝](forms.gle/MkwNfwRpG8B1wqb18) pour m'aider à l'améliorer.
+
