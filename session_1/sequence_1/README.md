@@ -127,7 +127,7 @@ Par exemple, pour transformer le mot 'iaco' en 'jacob' il faut changer le caract
 pip install nltk
 ```
 
-✏️  **Q4**. Dans NLTK, la distance de Levenshtein peut être calculée avec la méthode *[nltk.edit_distance](https://tedboy.github.io/nlps/generated/generated/nltk.edit_distance.html)*. Importez la méthode `edit_distance` du module `nltk.metrics`  dans le script `sequence_1.py` et vérifiez que  `edit_distance('iacob' et 'jacob')` est bien égal à 2.
+✏️  **Q4**. Dans NLTK, la distance de Levenshtein peut être calculée avec la méthode *[nltk.edit_distance](https://tedboy.github.io/nlps/generated/generated/nltk.edit_distance.html)*. Importez la méthode `edit_distance` du module `nltk.metrics`  dans le script `sequence_1.py` et vérifiez que  `edit_distance('iaco' et 'jacob')` est bien égal à 2.
 
 ✏️  **Q5**. Proposez une adaptation de  la fonction `score_exact` (Q1) nommée `score_approximatif`, qui imprime les distances d'édition des champs deux à deux et retourne leur moyenne arithmétique. Testez cette fonction sur les enregistrements `lacroix_1841` et `lacroix_1844`, avec ou sans normalisation préalable. Quel effet produit la normalisation préalable des champs ?
 
