@@ -2,9 +2,9 @@
 
 Une interface en ligne de commande (CLI) est un moyen d'interagir avec un programme en utilisant des lignes de texte plutôt qu'une interface graphique. Elle permet à l'utilisateur de donner des commandes directement à l'application en saisissant des lignes de texte dans le terminal. 
 
-Python est très adapté au développement d'outils CLI, c'est à dire paramétrables à l'aide d'un terminal, pour réaliser automatiser des tâches répétitives de manière rapide et efficace.
+Python est très adapté au développement d'outils en ligne de commande du fait de sa compatibilité inter-plateformes et de l'existence de bibliothèques très efficaces pour développer de tels outils.
 
-Vous utilisez déjà de nombreuses CLI au quotidien : la console Python en est par exemple une.
+Vous utilisez déjà diverses CLI, par exemple la console Python, ou les diverses commandes Linux.
 
 **Au programme**
 Cette nouvelle séquence va être l'occasion d'intégrer le mécanisme de couplage développé dans la sequence 1 pour en faire un véritable outil réutilisable.
@@ -29,12 +29,13 @@ options:
 
 ------------------------------------------------------------------------
 
+
 **Objectifs**
 - se familiariser avec la lecture & écriture de fichiers en Python;
 - apprendre à manipuler des données structurées de type CSV;
 - savoir concevoir et réaliser une CLI à l'aide de la bibliothèque Python **`argparse`**;
-- se familiariser avec les métriques d'évaluation qualité usuelles;
 ------------------------------------------------------------------------
+
 
 ## Point d'entrée principal
 
@@ -110,7 +111,7 @@ Comme son nom l'indique, **`argparse`** est une bibliothèque de *parsing* d'arg
 2. de les analyser lorsque le script est exécuté et de les rendre accessible à l'intérieur du script;
 3. de communiquer avec l'utilisateur en cas de problème.
 
-ℹ️ Bloqué(e)s ? Avant tout, cherchez une réponse dans la documentation de **`argparse`** https://docs.python.org/3/library/argparse.html ! 
+> [!IMPORTANT] Bloqué(e)s ? Avant tout, cherchez une réponse dans la documentation de **`argparse`** https://docs.python.org/3/library/argparse.html ! 
 
 ✏️ **Q2 : créer un analyseur d'arguments.**
 Déclarez l'import de argparse, puis déclarez une variable `parser` dans la fonction `main`  qui contient une instance de la classe `argparse.ArgumentParser`. Notez que vous pouvez donner au constructeur de `ArgumentParser` un argument  `description` qui servira à afficher à l'utilisateur l'objectif de votre programme. 
@@ -379,5 +380,10 @@ with open(...) as fichier:
 
 ❓ Testez votre commande pour vérifier que l'export fonctionne correctement !
 
-## Bonus : évaluation du couplage
-...
+---
+🏁 C'est tout pour cette fois !
+
+J'espère que cette activité a été enrichissante.
+
+N'hésitez pas à donner rapidement votre avis anonyme 📢 via [ce formulaire 📝](forms.gle/MkwNfwRpG8B1wqb18) pour m'aider à l'améliorer.
+
