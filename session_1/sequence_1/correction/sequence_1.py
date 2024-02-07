@@ -103,12 +103,13 @@ lacroix_1844 = [
 # puis d'utiliser ces indices pour accéder aux éléments des deux listes.
 # Une solution plus "pythonic" consiste à utiliser une boucle for en conjonction avec la fonction zip() pour parcourir les deux listes en parallèle.
 def score_approximatif(liste1: list[str], liste2: list[str]) -> float:
-    mean = 0.0
+    somme = 0.0
     for s1, s2 in zip(liste1, liste2):
         d = edit_distance(s1, s2)
         print(f"edit_distance({s1}, {s2}) = {d}")
-        mean += d
-    return mean / len(liste1)
+        somme += d
+     moyenne = somme / len(liste1)
+    return moyenne
 
 
 norm_1841 = [normalisation(s) for s in lacroix_1841]
