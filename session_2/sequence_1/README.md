@@ -3,14 +3,14 @@
 
 ## 1. Jupyter et ses notebooks
 
-[Jupyter](https://jupyter.org/) est un projet *open source* dont l'objectif est de développer des logiciels libres d'**informatique interactive** multi-langages de programmation[^1], dont l'exemple le plus connu est le système de cahiers électroniques appellés **Notebooks**.
+[Jupyter](https://jupyter.org/) est un projet *open source* dont l'objectif est de développer des logiciels libres d'**informatique interactive** multi-langages de programmation[^1], dont l'exemple le plus connu est le système de cahiers électroniques appelés **Notebooks**.
 
 Un *notebook* Jupyter est un document manipulable interactivement dans un navigateur Web, qui peut rassembler du code exécutable, avec du texte et des images[^2]. Un *notebook* est un outil incroyablement puissant pour mettre au point, décrire et partager des analyses de données. C'est aujourd'hui un incontournable de tout travail de *data science*. En sciences-humaines, ils sont extrêmement utiles pour échanger sur des données et leurs analyses avec les chercheurs.
 
 ### Installation & lancement
 Pour pouvoir utiliser des *notebooks*, il faut installer la bibliothèque Python [`jupyter`](https://pypi.org/project/jupyter/) publiée par le projet.
 
-Ce paquet installe l'environnement web interactif de Jupyter, c'est à dire une application web qui permet de lire, d'écrire et d'intéragir avec un *notebook*.
+Ce paquet installe l'environnement web interactif de Jupyter, c'est à dire une application web qui permet de lire, d'écrire et d'interagir avec un *notebook*.
 
 Avec pip :
 ```shell
@@ -30,9 +30,9 @@ jupyter notebook
 ```
 
 ### Bases du notebook
-> ℹ️ Dans la suite on considère que VSCode est utilisé. Tout est cependant similaire avec l'application Juptyer, seuls les menus diffèrent.
+> ℹ️ Dans la suite on considère que VSCode est utilisé. Tout est cependant similaire avec l'application Jupyter, seuls les menus diffèrent.
 
-Un *notebook* est simplement un fichier JSON avec l'extension `.ipynb`, que l'environnement Jupyter est capable d'intepreter.
+Un *notebook* est simplement un fichier JSON avec l'extension `.ipynb`, que l'environnement Jupyter est capable d’interpréter.
 
  ✏️ **Q1. Création**
 
@@ -48,7 +48,7 @@ Sont surlignés quelques-un des contrôles les plus importants d'un *notebook*:
 3. et 4. les contrôles principaux d'exécution des cellules du *notebook*. Passer le curseur sur un bouton permet d'avoir une description de son action.
 
 
-> ⚠️ Sauf mention contraire, dans la suite de l'atelier vous devre créer une nouvelle cellule pour **chaque nouvelle question** afin de conserver un notebook clair et facile à suivre.
+> ⚠️ Sauf mention contraire, dans la suite de l'atelier vous devrez créer une nouvelle cellule pour **chaque nouvelle question** afin de conserver un notebook clair et facile à suivre.
 
 
  ✏️ **Q2. Premier essai : sortie (très) simple.**
@@ -82,7 +82,7 @@ Ajoutez une nouvelle cellule de code sous la première, soit avec le bouton `+co
 
 Insérez dans cette nouvelle cellule un code qui demande son nom à l'utilisateur puis affiche le message `"Bonjour {name}"`.
 
-> ℹ️ la fonction native Pyton `input("prompt")` permet de lire une chaîne de caractère sur l'entrée standard (usuellement la console) tout en affichant le message "prompt". 
+> ℹ️ la fonction native Python `input("prompt")` permet de lire une chaîne de caractère sur l'entrée standard (usuellement la console) tout en affichant le message "prompt". 
 > Par exemple :
 > ```python
 > var = input("Ceci s'affichera au moment de demande une saisie")
@@ -102,7 +102,7 @@ Exécuter un *notebook*, c'est d'avantage "dérouler" un script Python pas à pa
 
 ✏️ **Q5. Programmation lettrée**
 
-Ce qui donne en realité toute leur puissance aux *notebooks*, c'est leur capacité à enrichir et documenter et structurer le code avec du "vrai" texte riche, en Markdown.
+Ce qui donne en réalité toute leur puissance aux *notebooks*, c'est leur capacité à enrichir et documenter et structurer le code avec du "vrai" texte riche, en Markdown.
 
 Ajoutez une cellule Markdown au début du *notebook*, avec le texte suivant :
 ```markdown
@@ -111,7 +111,7 @@ Ajoutez une cellule Markdown au début du *notebook*, avec le texte suivant :
 ## Premiers pas dans un *notebook*
 ```
 
-Ajoutez une cellule Markown avant chacune des cellules de code, et décrivez dedans ce que fait le code qui suit.
+Ajoutez une cellule Markdown avant chacune des cellules de code, et décrivez dedans ce que fait le code qui suit.
 
 > ℹ️ Il faut exécuter les cellules Markdown pour que Jupyter affiche le rendu.
 
@@ -149,7 +149,7 @@ import pandas as pd
 # pandas.DataFrame(...)
 ```
 
-## Experimentations
+## Expérimentations
 
 Extrêmement populaire, Pandas n'en est pas moins assez déroutante les débutants, car la manière d'accéder et manipuler des données est très différente de celle classique de Python.
 
@@ -160,10 +160,10 @@ En voici par exemple un à deux dimensions qui donne la population 8 villages de
 Fig. 2 : population de 8 villages mosellans entre l'an III et 1806.
 
 Cette figure montre également certaines notions essentielles de l'interface de Pandas :
-- **[bleu]** d'abord, chaque ligne est **indexée** par une valeur unique dans un séquence nommée **index**. Ici, c'est le nom du village dans la carte de Cassini du XVIIIe siècle qui sert d'index (l'index est nommé "nom_cassini"). Lorsque l'index est fait de chaînse de caractères comme ici, on parle aussi d'**étiquettes** (*labels*);
+- **[bleu]** d'abord, chaque ligne est **indexée** par une valeur unique dans un séquence nommée **index**. Ici, c'est le nom du village dans la carte de Cassini du XVIIIe siècle qui sert d'index (l'index est nommé "nom_cassini"). Lorsque l'index est fait de chaînes de caractères comme ici, on parle aussi d'**étiquettes** (*labels*);
 - **[vert]** il y a ensuite un ensemble de colonnes nommées, ici "pop_an3_val", "pop_an8_val" et "pop_1806_val".;
 - **[orange]** une ligne contient les cellules pour une valeur d'index donnée;
-- **[rose]**  une colonne contient les cellulles pour un nom de colonne donné.
+- **[rose]**  une colonne contient les cellules pour un nom de colonne donné.
 
 
 ✏️ **Q6. Section Pandas**.
@@ -172,7 +172,7 @@ Créez une nouvelle cellule Markdown dans votre *notebook* avec une section de n
 
 ✏️ **Q7. Créer une *DataFrame***.
 
-Les tableaux à 2 dimensions sont appellés ***DataFrame***. On peut créer la *DataFrame* ci-dessus par exemple à partir d'un dictionnaire Python : 
+Les tableaux à 2 dimensions sont appelés ***DataFrame***. On peut créer la *DataFrame* ci-dessus par exemple à partir d'un dictionnaire Python : 
 ```python
 data = {
     # 'colonne': [éléments, de, la, colonne]
@@ -205,23 +205,23 @@ La première chose que l'on peut faire avec un tableau, c'est sélectionner ses 
 
 Créez une nouvelle cellule Python, et affichez les selections suivantes:
 1. la colonne `pop_1806_val`;
-2. le sous-tableau contenant les colonnes `pop_an3_val` et `pop_an8_val`. Utilisez pous cela la syntaxe `populations[["colonne1", "colonne2"]]`;
+2. le sous-tableau contenant les colonnes `pop_an3_val` et `pop_an8_val`. Utilisez pour cela la syntaxe `populations[["colonne1", "colonne2"]]`;
 3. la ligne ayant l'étiquette "Neuf Village";
 4. les lignes du tableau de "Neuf Village" à "Ogy". Cela se fait de la même manière que pour sélectionner une tranches dans une liste ([*slices*](https://www.geeksforgeeks.org/python-list-slicing/)), avec l'opérateur `liste[DEBUT:FIN]`.
 
 > ℹ️ Pour afficher un résultat avant la dernière ligne de la cellule, utilisez `print()`.
 
 
-> ⚠️ Observez ce qui est affiché lorsque vous selectionnez une unique ligne ou une unique colonne. Ce qui est renvoyé n'est plus une **DataFrame** mais une **Series**, c'est à dire une liste nommée dont chaque élément possède une étiquette. En fait, à l'intérieur de Pandas, une **DataFrame** est tout simplement une collection de **Series**.
+> ⚠️ Observez ce qui est affiché lorsque vous sélectionnez une unique ligne ou une unique colonne. Ce qui est renvoyé n'est plus une **DataFrame** mais une **Series**, c'est à dire une liste nommée dont chaque élément possède une étiquette. En fait, à l'intérieur de Pandas, une **DataFrame** est tout simplement une collection de **Series**.
 
 ### Un aperçu succinct de la "magie" Pandas
-Pandas propose une collection impressionante de fonctionnalités qu'il est impossible de couvrir dans cette session.
+Pandas propose une collection impressionnante de fonctionnalités qu'il est impossible de couvrir dans cette session.
 
 Testons-en tout de même quatre, qui montrent un aperçu rapide de la puissance de Pandas pour travailler facilement avec des tableaux de données pouvant être massifs.
 
 ✏️ **Q9. Sélection conditionnelle : masques booléens**.
 
-En plus des selections simples, Pandas est capable de selectionner des parties d'un tableau sous conditions, avec une syntaxe relativement simple.
+En plus des selections simples, Pandas est capable de sélectionner des parties d'un tableau sous conditions, avec une syntaxe relativement simple.
 En voici un exemple qui sélectionne les villages ayant plus de 100 habitants à l'an III :
 ```python
 populations[populations['pop_an3_val'] > 100]
@@ -288,7 +288,7 @@ Les bases de Pandas étant vues, passons à plus amusant : explorer de véritabl
 
 ✏️ **Q12. Nouvelle Section & chargement des données**.
 
-Créez une nouvelle cellule Mardown à la fin du *notebook*, avec le texte suivant :
+Créez une nouvelle cellule Markdown à la fin du *notebook*, avec le texte suivant :
 ```markdown
 ## Évolution démographique des communes de France.
 ```
@@ -306,7 +306,7 @@ Chargez ensuite les fichiers `communes_de_france.csv` et `demographie_des_commun
 
  Affichez ensuite les 5 premières lignes de chacune grâce à la méthode `DataFrame.head(5)` pour vérifier les deux tableaux sont bien structurés, avec le bon index.
 
-> ⚠️ Remarquez que les colonnes de population sont maintenant des annnées. Ce sera bien pratique au moment de créer des graphiques. Seul inconvénient : les années révolutionnaires ont été approximées par des années du calendrier grégorien (1794 pour l'an III, 1799 pour l'an VIII).
+> ⚠️ Remarquez que les colonnes de population sont maintenant des années. Ce sera bien pratique au moment de créer des graphiques. Seul inconvénient : les années révolutionnaires ont été approximées par des années du calendrier grégorien (1794 pour l'an III, 1799 pour l'an VIII).
 
 ✏️ **Q13. Jointure des communes et de leur population**.
 Profitons en pour expérimenter une nouvelle fonctionnalité importante de Pandas : sa capacité à joindre des tableaux, comme en SQL.
@@ -364,7 +364,7 @@ Ainsi, on pourra directement générer le graphique de l'évolution de sa popula
 
 Toutefois on ne veut pas créer le graphique à partir de toutes les colonnes de la table `commune_choisie` mais uniquement celles contenant les chiffres de population aux différentes dates de recensement.
 
-On a donc besoin d'appliquer un filtrage sur `commune_choisie` avant d'appeler la méthode `plot()` pour conscommuneserver uniquement les colonnes de `1794` jusqu'à `1999`.
+On a donc besoin de filtrer la colonne `commune_choisie` avant d'appeler la méthode `plot()` pour conserver uniquement les colonnes de `1794` jusqu'à `1999`.
 
 On peut reprendre la syntaxe de la Question 8, point 4, mais cette fois on souhaite sélectionner un sous-ensemble de colonnes, pas de lignes.
 
@@ -493,11 +493,11 @@ plt.show()
 ![alt text](img/graphique_extrait_2.png)
 
 
-> ℹ️  De nombreux autres aspects du graphes peuvent être personnalisés. Pour en savoir plus, repportez-vous à la documentation de Matplotlib : https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html
+> ℹ️  De nombreux autres aspects du graphes peuvent être personnalisés. Pour en savoir plus, reportez-vous à la documentation de Matplotlib : https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html
 
 
 
-✏️ **Q19. Quesition bonus : et pour finir, une carte !**.
+✏️ **Q19. Question bonus : et pour finir, une carte !**.
 
 Peut-être avez-vous remarqué que la table `communes_populations` contenait des coordonnées géographiques dans deux colonnes nommées `lon` (pour longitude) et `lat` (pour latitude).
 
