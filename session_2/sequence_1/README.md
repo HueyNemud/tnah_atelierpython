@@ -353,10 +353,10 @@ Commençons avec un type de visualisation simple : une courbe de l'évolution d�
 
 Choisissez une commune (avec des données de population !), soit:
 - par son index, par exemple `communes_populations.loc[41498]`
-- par son nom, par exemple `communes_populations.loc[communes_populations.nom_1999 == 'Strasbourg']`
+- par son nom, par exemple `communes_populations.loc[communes_populations.nom_1999 == 'Strasbourg'].iloc[0]`
 - de manière aléatoire : `communes_populations.sample(1)`
 
-Stockez le résultat dans une variable nommée `commune_choisie`, puis affichez le en utilisant la fonction `display(commune_choisie)`. Vous constaterez que les 3 méthodes renvoient une **DataFrame** contenant une seule ligne.
+Stockez le résultat dans une variable nommée `commune_choisie`, puis affichez le en utilisant la fonction `display(commune_choisie)`. Vous constaterez que les 3 méthodes renvoient une **Series** correspondant à la ligne selectionnée.
 Ainsi, on pourra directement générer le graphique de l'évolution de sa population avec la méthode `commune.plot()` !
 
 
@@ -368,11 +368,12 @@ On a donc besoin de filtrer la colonne `commune_choisie` avant d'appeler la mét
 
 On peut reprendre la syntaxe de la Question 8, point 4, mais cette fois on souhaite sélectionner un sous-ensemble de colonnes, pas de lignes.
 
-Comment faire ?! À nouveau, Pandas propose une syntaxe élégante :
+Comment faire ?! À nouveau, Pandas propose une syntaxe élégante utilisant l'opérateur de  *slicing* `:` des listes :
 ```python
-commune_choisie.loc[:, '1794':'1999']
+commune_choisie.loc['1794':'1999']
 ```
-Rappelez-vous : une *DataFrame* est un tableau en 2 dimensions. En Python classique, on accès à un élément d'une liste (1 dimension) avec l'opérateur crochets [...] : 
+
+Il est important de retenir que cette notation fonctionne également pour les *DataFrame*, les tables en 2 dimensions. En Python classique, on accès à un élément d'une liste (1 dimension) avec l'opérateur crochets [...] : 
 ```python
 ma_liste:list = ['a', 'b', 'c']
 # Sélection d'un élément simple
@@ -414,8 +415,7 @@ ma_dataframe.loc[:, "c2"]  # Renvoie la colonne 'c2'.
 
 ✏️ **Q15. Sélection d'une commune à analyser graphiquement, suite**.
 
-On reprend donc la question 15. Dans la même cellule, utilisez `iloc()` avec la syntaxe expliquée ci-dessus pour conserver uniquement les colonnes de population de la table `commune_choisie`, c'est à dire de la colonne `1794` à `1999`. Stockez le résultat dans une variable nommée `commune_choisie_populations`.
-
+On reprend donc la question 15. Dans la même cellule, utilisez la syntaxe expliquée ci-dessus pour conserver uniquement les colonnes de population de la table `commune_choisie`, c'est à dire de la colonne `1794` à `1999`. Stockez le résultat dans une variable nommée `commune_choisie_populations`.
 
 
 ✏️ **Q16. Graphique de l'évolution démographique de la commune choisie**.
